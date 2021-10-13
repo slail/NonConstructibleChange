@@ -13,4 +13,12 @@ you can't create is 1.
 
 # O(nlogn) Time | O(1) Space
 def nonConstructibleChange(coins):
-    return 
+    coins.sort()
+    current_balance = 0
+    for coin in coins:
+        if coin > current_balance + 1:
+            return current_balance + 1
+        current_balance += coin
+    return current_balance + 1
+
+print(nonConstructibleChange([5, 7, 1, 1, 2, 3, 22]))
