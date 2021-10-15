@@ -10,7 +10,7 @@ the minimum amount of change that you can't create is 4 .
 If you're given no coins, the minimum amount of change that
 you can't create is 1.
 '''
-
+# ReDone
 # O(nlogn) Time | O(1) Space
 def nonConstructibleChange(coins):
     coins.sort()
@@ -21,4 +21,4 @@ def nonConstructibleChange(coins):
         current_balance += coin
     return current_balance + 1
 
-print(nonConstructibleChange([5, 7, 1, 1, 2, 3, 22]))
+print(nonConstructibleChange([1, 2, 5]))
